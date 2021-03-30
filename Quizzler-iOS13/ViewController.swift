@@ -9,12 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    var questionNumber = 0
+    
+    let quiz = [
+        Question(text: "Am I dope?", answer: true),
+        Question(text: "Are you dope?", answer: false)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        labelText.text = quiz[questionNumber].text
     }
 
-
+    @IBAction func buttonHandler(_ sender: UIButton) {
+        
+    }
+    
+    
+    
 }
 
